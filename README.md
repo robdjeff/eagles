@@ -9,7 +9,7 @@ The purpose of the code is to implement an empirical model that predicts the lit
 
 The code consists of a simple Python 3 script (eagles.py), which contains an extensive help file that details the data input format and the command line options. Thus can be viewed at the head of the code or by executing it as "**<script> -h**"
   
-**input.dat** is an example input data file containg the data for three stars which might be part of a cluster
+**input.dat** is an example input data file containing the data for three stars which might be part of a cluster
   
 To test whether the code is working use  
   **"<script> input.dat output -c -s"**,  
