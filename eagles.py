@@ -625,7 +625,7 @@ def main(argv):
     lagesmax = 10.1
     lApkmin = np.log10(5)+6    
     nAge = 820
-    nTeff = 21 # not currently an optional parameter - number of integration steps if
+    nTeff = 21 # not currently an optional parameter - number of integration steps
                # if marginalising over supplied Teff uncertainties
     z = 1.0e-12
     eTeff = None # over-ridden if input has 5 columns
@@ -816,7 +816,7 @@ def main(argv):
                 get_li_age(LiEW, eLiEW, Teff, lagesmax=lagesmax, lagesmin=lagesmin, \
                        lApkmin=lApkmin, z=z, nAge=nAge, prior=prior, eTeff=eTeff)
             # append the combined results for the cluster as the last tow in the dataframe
-      #      df.loc[len(df)] = ['Cluster', 0, 0, 0, 0, p[0], p[1], p[2], p[3], p[4], p[5]]
+            df.loc[len(df)] = ['Cluster', 0, 0, 0, 0, p[0], p[1], p[2], p[3], p[4], p[5]]
         
 
 
@@ -862,13 +862,10 @@ def main(argv):
     print("*********************************************\n")
     
 
-
-
     
     df.to_csv(filename+'.csv', float_format="%7.3f", index=False) 
     
     
-   
 ###THE END###
 
 
