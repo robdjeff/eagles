@@ -29,5 +29,11 @@ and produce the output files
 *  output_pos.csv        - combined posterior probability distribution for the dataset
 *  output.csv            - summary results for the three stars and result for the cluster
   
+  
+ ## Additional Scripts/Files
+ 
+ * eagles_iso.py   - script to produce model isochrones of EWLi vs Teff, plot and save them as ascii files
+ * eagles_iso.zip  - a zip file containing isochrones at 5, 10, 15, 20, 30, 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000 Myr. Any other ages can be produced using eagles_iso.py
+ 
   # Contact
   To register an interest, request clarifications or report bugs - email r.d.jeffries@keele.ac.uk
