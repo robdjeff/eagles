@@ -18,7 +18,7 @@ from eagles import eAT2EWm
 
 
 # Modify the list below for the isochrones you want to produce (units are Myr)
-ages = [5, 10, 15, 20, 30, 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000]
+ages = [5, 10, 15, 20, 30, 50, 100, 300, 1000, 5000]
 
 # e.g. for fewer isochrones
 #ages = [10, 100, 1000]
