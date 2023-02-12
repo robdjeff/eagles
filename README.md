@@ -1,4 +1,4 @@
-# eagles
+# EAGLES
 ## Estimating AGes from Lithium Equivalent widthS
 
 This is the software described in the paper "Estimating Ages from Lithium Equivalent Widths (EAGLES)" by Jeffries et al. (2023), MNRAS submitted.
