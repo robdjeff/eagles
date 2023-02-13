@@ -6,7 +6,6 @@ This is the software described in the paper "Estimating Ages from Lithium Equiva
 The purpose of the code is to implement an empirical model that predicts the lithium equivalent width (EW) of a star, as a function of its age and effective temperature (Teff). This model is used to compute the age probability distribution for a star with a given EW and Teff, subject to an age probability prior that may be flat in age or flat in log age. If the data for more than one star is entered, then the option exists to treat this as a cluster and determine the age probability distribution for the ensemble. The code will produce estimates of the most probable age, uncertainties and the median age, output files consisting of probability plots, best-fit isochrone plots and tables of the posterior age probability distribution(s).
 
 
-
 ## Running the code
 
 The code consists of a simple Python 3 script (eagles.py), which contains an extensive help file that details the data input format and the command line options. ThIs can be viewed at the head of the code or by executing it as "**<script> -h**"
@@ -17,7 +16,8 @@ To test whether the code is working use
   **"<script> input.dat output -c -s"**,  
   which should report the following  
   
-  ![image](https://user-images.githubusercontent.com/104770145/218310048-d8979b60-fbe0-465a-acf2-41ee67b427d0.png)
+ 
+![image](https://user-images.githubusercontent.com/104770145/218447810-62c683af-cb86-4c0a-82e6-b1f58c523ebb.png)
 
 
  Cluster of 3 stars  
@@ -39,6 +39,9 @@ and produce the output files
  
  * eagles_iso.py   - script to produce model isochrones of EWLi vs Teff, plot and save them as ascii files
  * eagles_iso.zip  - a zip file containing isochrones at 5, 10, 15, 20, 30, 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000 Myr. Any other ages can be produced using eagles_iso.py
+ 
+ ![image](https://user-images.githubusercontent.com/104770145/218448006-21132158-63b4-49a3-a6f1-e8cfcc28de37.png)
+
  
   # Contact
   To register an interest, request clarifications or report bugs - email r.d.jeffries@keele.ac.uk
