@@ -31,9 +31,11 @@ plot_dispersion = False
 tstep = 0.002
 
 # parameters for the plot
+
+fig, ax = plt.subplots()
 plt.xlabel('Teff (K)')
 plt.ylabel('LiEW (mA)')
-plt.xlim(6500, 3000)
+ax.set_xlim(6500, 3000)
 
 # set up a an equally spaced set of log temperatures between 3000 and 6500 K
 lteff = np.arange(3.4772, 3.8130, tstep)
@@ -49,7 +51,7 @@ for t in ages :
     name = 'iso_'+str(t)+'.txt'
     np.savetxt(name, np.column_stack((10**lteff, ewm, eewm)), fmt='%.1f %.1f %.1f', delimiter=' ', header = "Teff(K) EWLim(mA) eEWLi(mA)")
  
-    plt.plot(10**lteff, ewm)
+    ax.plot(10**lteff, ewm, label='%s Myr' %t)
 
     # if the plot_dispersion flag then shade the dispersion region
     # looks quite messy if there are lots of isochrones because of the overlap
@@ -57,5 +59,10 @@ for t in ages :
         plt.fill_between(10**lteff, ewm-eewm, ewm+eewm, alpha=0.3)
 
 # For the default list of ages and plot_dispersion = False, this is Fig.2 from the paper    
+
+if len(ages) <5 :
+    plt.legend()
+else :
+    ax.text(0.01,0.95, str(ages)+" Myr", transform=ax.transAxes)
 plt.show()
 
