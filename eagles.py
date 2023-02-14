@@ -40,7 +40,7 @@ help = f'''
         Col 1 is a string identifier with no spaces,
         Col 2 is an effective temperature in K,
         Col 3 is an *optional* 1-sigma error in Teff in K (see paper)
-        Col 4 is Li equivalent width in milli-angstroms,
+        Col 4 is Li equivalent width in milli-angstroms (should be deblended from nearby Fe line),
         Col 5 is the error in equivalent width in milli-angstroms. 
         
     output_file is the stem for the output files, with no suffix.
@@ -49,7 +49,7 @@ help = f'''
         results for the cluster.
         
         The first columns are those of the input file. The last 6 columns are:
-        lApk is the more probable age (peak of the posterior probability distribution)
+        lApk is the most probable age (peak of the posterior probability distribution)
         siglo is the lower bound of the asymmetric 68% confidence interval
         sighi is the upper bound of the asymmetric 68% confidence interval
         limup is the 95% age upper limit
@@ -740,7 +740,10 @@ def main(argv):
         print_help()
      
     
-    
+    print("***************************************************")
+    print("****************EAGLES V1.0************************")
+    print("***************************************************\n")  
+
     # setup the output lists
     l_lApk = []
     l_siglo = []
@@ -798,9 +801,6 @@ def main(argv):
     #Then if it is a cluster run again with the full list combined and
     # print out all the combined numerical results to the screen
  
-    print("*********************************************")
-    print("****************EAGLES V1.0******************")
-    print("*********************************************\n")
     if is_cluster and nStar > 1:
         
         if ncol == 4:
@@ -814,7 +814,7 @@ def main(argv):
             lAges, llike, lprob, p, chisq = \
                 get_li_age(LiEW, eLiEW, Teff, lagesmax=lagesmax, lagesmin=lagesmin, \
                        lApkmin=lApkmin, z=z, nAge=nAge, prior=prior, eTeff=eTeff)
-            # append the combined results for the cluster as the last tow in the dataframe
+            # append the combined results for the cluster as the last row in the dataframe
             df.loc[len(df)] = ['Cluster', 0, 0, 0, 0, p[0], p[1], p[2], p[3], p[4], p[5]]
         
         print('Cluster of %i stars' % nStar)
@@ -856,8 +856,11 @@ def main(argv):
         np.savetxt(filename+"_pos.csv", data, fmt=['%7.4f', '%7.3e'], 
                        delimiter = ',', header= 'log (Age/yr)  Probability')
 
-
-    print("*********************************************\n")
+    
+       
+    print('\n Results for individual stars reported to '+filename+'.csv')
+    
+    print("***************************************************\n")
     
     
     df.to_csv(filename+'.csv', float_format="%7.3f", index=False) 
