@@ -486,8 +486,7 @@ def get_li_age(LiEW, eLiEW, Teff, eTeff=None, lagesmin=6.0, lagesmax=10.1,
 def make_plots(lAges, lprob, p, chisq, lagesmin, lagesmax, \
                ID, LiEW, eLiEW, Teff, filename, is_cluster=False, savefig=False):
 
-
-    
+ 
     # produce a probability plot, either for the cluster or for an individual star
     nStar = np.shape(LiEW)[0]
     plt.xlabel('log Age/yr')
@@ -818,12 +817,6 @@ def main(argv):
             # append the combined results for the cluster as the last tow in the dataframe
             df.loc[len(df)] = ['Cluster', 0, 0, 0, 0, p[0], p[1], p[2], p[3], p[4], p[5]]
         
-
-
-        # make the plots for a cluster and save if required
-        make_plots(lAges, lprob, p, chisq, \
-                   lagesmin, lagesmax, ID, LiEW, eLiEW, Teff, filename, is_cluster, savefig)
-
         print('Cluster of %i stars' % nStar)
         print('chi-squared of fit = %6.2f' % chisq)
         
@@ -849,23 +842,28 @@ def main(argv):
         print('median log (Age/yr) = %5.3f' % (p[5]))
         print('median Age (Myr) = %6.1f' % (10**(p[5]-6)))
 
+        # make the plots for a cluster or single star and save if required
+        make_plots(lAges, lprob, p, chisq, \
+                   lagesmin, lagesmax, ID, LiEW, eLiEW, Teff, filename, is_cluster, savefig)
+
+        
 
         # write out the combined posterior probability to a csv file
         # format is log Age/yr probability (normalised to 1 at its peak)
-        if (is_cluster) or nStar == 1 :
+
         
-            data = np.column_stack([lAges, np.exp(lprob)])
-            np.savetxt(filename+"_pos.csv", data, fmt=['%7.4f', '%7.3e'], 
+        data = np.column_stack([lAges, np.exp(lprob)])
+        np.savetxt(filename+"_pos.csv", data, fmt=['%7.4f', '%7.3e'], 
                        delimiter = ',', header= 'log (Age/yr)  Probability')
 
 
     print("*********************************************\n")
     
-
     
     df.to_csv(filename+'.csv', float_format="%7.3f", index=False) 
     
     
+   
 ###THE END###
 
 
