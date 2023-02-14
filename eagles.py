@@ -766,7 +766,7 @@ def main(argv):
                        lApkmin=lApkmin, z=0.0, nAge=nAge, prior=prior, eTeff=eTeff[i:i+1])
  
         # make plots for the individual stars and save them if required
-        if everystar :
+        if everystar and nStar > 1:
             make_plots(lAges, lprob, p, chisq, \
                        lagesmin, lagesmax, ID[i], LiEW, eLiEW, Teff, filename, is_cluster=False, savefig=savefig)  
 
@@ -844,7 +844,7 @@ def main(argv):
 
         # make the plots for a cluster or single star and save if required
         make_plots(lAges, lprob, p, chisq, \
-                   lagesmin, lagesmax, ID, LiEW, eLiEW, Teff, filename, is_cluster, savefig)
+                   lagesmin, lagesmax, ID[0], LiEW, eLiEW, Teff, filename, is_cluster, savefig)
 
         
 
