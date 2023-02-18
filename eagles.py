@@ -539,6 +539,7 @@ def make_plots(lAges, lprob, p, chisq, lagesmin, lagesmax, \
         else:
             plt.savefig(filename+'_'+ID+'_prob.pdf')
     plt.show()
+
     
     # produce a plot of LiEW vs Teff with the best-fitting isochrone also showing the 
     # intrinsic dispersion
@@ -547,17 +548,9 @@ def make_plots(lAges, lprob, p, chisq, lagesmin, lagesmax, \
         
         # set the Teff array and limits at which to plot isochrones
         lTeff = np.arange(3.4771, 3.8130, 0.001) #between 3000K and 6500K
+        plt.cla() # clear annotation
         plt.xlim(6600, 2900)
-        
-       # if nStar == 1 :
-       #     lTeff = np.arange(max(np.log10(Teff*0.9),3.4771), \
-       #                       min(np.log10(Teff*1.1),3.8130), 0.001)   
-       #     plt.xlim(min(6600, Teff*1.1), max(2900, Teff*0.9))
-       # else :
-       #     lTeff = np.arange(3.4771, 3.8130, 0.001) #between 3000K and 6500K
-       #     plt.xlim(6600, 2900)
-        
-        ax = plt.gca()
+        ax = plt.gca() 
 
         # plot an isochrone and the dispersion around the isochrone
         # handle cases where age is found or just limits
