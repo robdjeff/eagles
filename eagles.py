@@ -144,11 +144,11 @@ def AT2EWm(lTeff, lAge):
 
     lTc =  3.524
     CT0 = -6.44
-    CT1 =  4.06
+    CT1 =  4.040
     AAc =  291.3
-    AA1 =  20699.0
+    AA1 =  20687.0
     BBc =  0.111
-    BBt = -164.8
+    BBt = -164.7
     CCc =  7.131
 
     # calculate parameters
@@ -179,11 +179,11 @@ def eAT2EWm(lTeff, lAge):
 
     lTc =  3.524
     CT0 = -6.44
-    CT1 =  4.06
+    CT1 =  4.040
     AAc =  291.3
-    AA1 =  20699.0
+    AA1 =  20687.0
     BBc =  0.111
-    BBt = -164.8
+    BBt = -164.7
     CCc =  7.131
     
     EE0 = 84.3
