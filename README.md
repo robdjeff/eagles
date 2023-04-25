@@ -17,8 +17,8 @@ To test whether the code is working use
   **"<script> input.dat output -c -s"**,  
   which should report the following  
   
- 
-![image](https://user-images.githubusercontent.com/104770145/218447810-62c683af-cb86-4c0a-82e6-b1f58c523ebb.png)
+![github1](https://user-images.githubusercontent.com/104770145/234336618-d72f732a-8d97-4878-b6b8-87b2cb07b69a.png)
+
 
 
  Cluster of 3 stars  
