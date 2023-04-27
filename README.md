@@ -1,7 +1,7 @@
 # EAGLES
 ## Estimating AGes from Lithium Equivalent widthS
 
-This is the software described in the paper "Estimating Ages from Lithium Equivalent Widths (EAGLES)" by Jeffries et al. (2023), MNRAS submitted. 
+This is the software described in the paper "Estimating Ages from Lithium Equivalent Widths (EAGLES)" by Jeffries et al. (2023), MNRAS in press ([https://arxiv.org/abs/2304.12197](https://arxiv.org/abs/2304.12197)). 
 The code implements an empirical model that predicts the lithium equivalent width (EW) of a star (from the Li I 6708A line), as a function of its age and effective temperature ($T_{eff}$). This was developed by fitting to a training dataset consisting of around 6000 stars in 52 open clusters that were observed as part of the Gaia-ESO survey ([Gilmore et al. 2022](https://ui.adsabs.harvard.edu/abs/2022A%26A...666A.120G/abstract); [Randich et al. 2022](https://ui.adsabs.harvard.edu/abs/2022A%26A...666A.121R/abstract); [Jackson et al. 2022](https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.1664J/abstract)) and is applicable to stars with $3000 < T_{eff} < 6500$ K and $-0.3 < [Fe/H]  < 0.2$.
 
 This model is used to compute the age probability distribution for a star with a given EW and Teff, subject to an age probability prior that may be flat in age or flat in log age. If the data for more than one star are entered, then the option exists to treat this as a cluster and determine the age probability distribution for the ensemble. The code will produce estimates of the most probable age, uncertainties and the median age, output files consisting of probability plots, best-fit isochrone plots and tables of the posterior age probability distribution(s).
