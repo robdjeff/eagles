@@ -43,6 +43,34 @@ and produce the output files
  
  ![image](https://user-images.githubusercontent.com/104770145/218448006-21132158-63b4-49a3-a6f1-e8cfcc28de37.png)
 
+
+## EAGLES V2
+
+A newer version of EAGLES is included in the zip file 'eaglesv2_0.zip'. This new version inclues an option for an artificial neural network (ANN) model of the relationship between EWLi (and its intrinsic dispersion), $T_{eff}$ and (log) age (Weaver, Jeffries & Jackson 2024 in prep). The zip file contains a new script 'eaglesv2_0.py' along with a pre-computed grid of EWLi (and its intrinsic dispersion) as a function of $T_{eff}$ and age, a readme file containing a description of the changes in version 2.0 and the same 'input.dat' test file.
+
+To run the script using the ANN model, simply use the -m option on the command line, making sure that the pre-computed grid is in the same folder as the script. If the -m flag is omitted then the model used is the same analytic model described by Jeffries et al. (2023) and implemented in version 1.0.
+
+Running on the example 'input.dat' file
+
+ **"<script> input.dat output -m -c -s"**,  
+  which should report the following  
+
+***************************************************
+****************EAGLES V2.0************************
+***************************************************
+
+No additional Teff errors in input file
+
+Using ANN model:
+
+Setting log(age) limits to 6.0 - 10.1
+
+Cluster of 3 stars
+chi-squared of fit =   0.20
+most probable log (Age/yr) = 7.315 +0.160/-0.640
+most probable Age (Myr) =   20.7 +   9.2/-  15.9
+median log (Age/yr) = 7.095
+median Age (Myr) =   12.4
  
   # Contact
   To register an interest, request clarifications or report bugs - email r.d.jeffries@keele.ac.uk
