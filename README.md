@@ -58,22 +58,22 @@ Running on the example 'input.dat' file
 ![eaglesv2](https://github.com/robdjeff/eagles/assets/104770145/31fe7a94-fe59-4b09-8961-aff1dbf39a4f)
 
 
- **EAGLES V2.0**
+ **EAGLES V2.0**  
 
- No additional Teff errors in input file
+ No additional Teff errors in input file  
 
- Using ANN model:
+ Using ANN model:  
 
  Setting log(age) limits to 6.0 - 10.1
 
- Cluster of 3 stars 
- chi-squared of fit =   0.20 
- most probable log (Age/yr) = 7.315 +0.160/-0.640 
- most probable Age (Myr) =   20.7 +   9.2/-  15.9 
- median log (Age/yr) = 7.095 
- median Age (Myr) =   12.4 
+ Cluster of 3 stars  
+ chi-squared of fit =   0.20  
+ most probable log (Age/yr) = 7.315 +0.160/-0.640  
+ most probable Age (Myr) =   20.7 +   9.2/-  15.9  
+ median log (Age/yr) = 7.095  
+ median Age (Myr) =   12.4  
 
-and produce the output files
+and produce the output files  
   
 *  output_prob.pdf       - plot of the combined age probability distribution
 *  output_iso.pdf        - plot of the data and best-fit isochrone in the EW vs Teff plane
