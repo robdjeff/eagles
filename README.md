@@ -53,22 +53,25 @@ To run the script using the ANN model, simply use the -m option on the command l
 Running on the example 'input.dat' file
 
  **"<script> input.dat output -m -c -s"**,  
-  which should report the following  
+  which should output the following  
 
-**EAGLES V2.0**
+![eaglesv2](https://github.com/robdjeff/eagles/assets/104770145/31fe7a94-fe59-4b09-8961-aff1dbf39a4f)
 
-No additional Teff errors in input file
 
-Using ANN model:
+ **EAGLES V2.0**
 
-Setting log(age) limits to 6.0 - 10.1
+ No additional Teff errors in input file
 
-Cluster of 3 stars
-chi-squared of fit =   0.20
-most probable log (Age/yr) = 7.315 +0.160/-0.640
-most probable Age (Myr) =   20.7 +   9.2/-  15.9
-median log (Age/yr) = 7.095
-median Age (Myr) =   12.4
+ Using ANN model:
+
+ Setting log(age) limits to 6.0 - 10.1
+
+ Cluster of 3 stars 
+ chi-squared of fit =   0.20 
+ most probable log (Age/yr) = 7.315 +0.160/-0.640 
+ most probable Age (Myr) =   20.7 +   9.2/-  15.9 
+ median log (Age/yr) = 7.095 
+ median Age (Myr) =   12.4 
 
 and produce the output files
   
