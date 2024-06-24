@@ -55,9 +55,7 @@ Running on the example 'input.dat' file
  **"<script> input.dat output -m -c -s"**,  
   which should report the following  
 
-***************************************************
-****************EAGLES V2.0************************
-***************************************************
+**EAGLES V2.0**
 
 No additional Teff errors in input file
 
@@ -71,6 +69,13 @@ most probable log (Age/yr) = 7.315 +0.160/-0.640
 most probable Age (Myr) =   20.7 +   9.2/-  15.9
 median log (Age/yr) = 7.095
 median Age (Myr) =   12.4
+
+and produce the output files
+  
+*  output_prob.pdf       - plot of the combined age probability distribution
+*  output_iso.pdf        - plot of the data and best-fit isochrone in the EW vs Teff plane
+*  output_pos.csv        - combined posterior probability distribution for the dataset
+*  output.csv            - summary results for the three stars and result for the cluster
  
   # Contact
   To register an interest, request clarifications or report bugs - email r.d.jeffries@keele.ac.uk
