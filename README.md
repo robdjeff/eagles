@@ -79,6 +79,10 @@ and produce the output files
 *  output_iso.pdf        - plot of the data and best-fit isochrone in the EW vs Teff plane
 *  output_pos.csv        - combined posterior probability distribution for the dataset
 *  output.csv            - summary results for the three stars and result for the cluster
- 
+
+  # Citation
+  If you make use of the EAGLES code(s) we would appreciate that you cite [Jeffries et al. 2023, MNRAS, 523, 802](https://academic.oup.com/mnras/article/523/1/802/7147327).
+
+  Ig you use Version 2 od the code (the neural network model), you should also cite [Weaver, Jeffries and Jackson 2024, arXiv 2409.07523](https://arxiv.org/abs/2409.07523).
   # Contact
   To register an interest, request clarifications or report bugs - email r.d.jeffries@keele.ac.uk
