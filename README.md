@@ -4,9 +4,12 @@
 This is the software described in the paper "Estimating Ages from Lithium Equivalent Widths (EAGLES)" by Jeffries et al. (2023), MNRAS, 523, 802 ([https://arxiv.org/abs/2304.12197](https://arxiv.org/abs/2304.12197)). 
 The code implements an empirical model that predicts the lithium equivalent width (EW) of a star (from the Li I 6708A line), as a function of its age and effective temperature ($T_{eff}$). This was developed by fitting to a training dataset consisting of around 6000 stars in 52 open clusters that were observed as part of the Gaia-ESO survey ([Gilmore et al. 2022](https://ui.adsabs.harvard.edu/abs/2022A%26A...666A.120G/abstract); [Randich et al. 2022](https://ui.adsabs.harvard.edu/abs/2022A%26A...666A.121R/abstract); [Jackson et al. 2022](https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.1664J/abstract)) and is applicable to stars with $3000 < T_{eff} < 6500$ K and -0.3 < [Fe/H]  < 0.2.
 
+
 This model is used to compute the age probability distribution for a star with a given EW and Teff, subject to an age probability prior that may be flat in age or flat in log age. If the data for more than one star are entered, then the option exists to treat this as a cluster and determine the age probability distribution for the ensemble. The code will produce estimates of the most probable age, uncertainties and the median age, output files consisting of probability plots, best-fit isochrone plots and tables of the posterior age probability distribution(s).
 
-A new version 2.0 of the code implements a machine learning model for the relationship between EWLi, $T_{eff}$ and age (see  [Weaver, Jeffries and Jackson 2024, arXiv 2409.07523](https://arxiv.org/abs/2409.07523)
+Case studies of usage include putting constraints on the ages of planet-hosting stars ([Filomeno et al. 2024](https://www.aanda.org/articles/aa/full_html/2024/10/aa50611-24/aa50611-24.html); [Thao et al. 2024](https://iopscience.iop.org/article/10.3847/1538-3881/ad4993), as a complement to and check on gyrochronological and isochronal ages ([Bouma et al. 2024](https://ui.adsabs.harvard.edu/abs/2024ApJ...976..234B/abstract)), to identify and age young stellar populations ([Luhman 2024](https://iopscience.iop.org/article/10.3847/1538-3881/ad697d); [Kerr et al. 2024](https://iopscience.iop.org/article/10.3847/1538-4357/ad7135)) and to estimate the ages of stellar clusters and associations ([Alonso-Santiago et al. 2024](https://www.aanda.org/articles/aa/full_html/2024/11/aa52204-24/aa52204-24.html); [Miret Roig et al. 2024](https://ui.adsabs.harvard.edu/abs/2024NatAs...8..216M/abstract)).
+
+A new version 2.0 of the code implements a machine learning model for the relationship between EWLi, $T_{eff}$ and age (see  [Weaver, Jeffries and Jackson 2024, MNRAS, 534, 2014](https://arxiv.org/abs/2409.07523)
 and below).
 
 ## Running the code
@@ -48,11 +51,11 @@ and produce the output files
 
 ## EAGLES V2
 
-A newer version of EAGLES is included in the zip file 'eaglesv2_0.zip'. This new version inclues an option for an artificial neural network (ANN) model of the relationship between EWLi (and its intrinsic dispersion), $T_{eff}$ and (log) age ([Weaver, Jeffries and Jackson 2024, arXiv 2409.07523](https://arxiv.org/abs/2409.07523)). The zip file contains a new script 'eaglesv2_0.py' along with a pre-computed grid of EWLi (and its intrinsic dispersion) as a function of $T_{eff}$ and age, a readme file containing a description of the changes in version 2.0 and the same 'input.dat' test file.
+A newer version of EAGLES is included in the zip file 'eaglesv2_0.zip'. This new version inclues an option for an artificial neural network (ANN) model of the relationship between EWLi (and its intrinsic dispersion), $T_{eff}$ and (log) age ([Weaver, Jeffries and Jackson 2024, MNRAS, 534, 2014](https://arxiv.org/abs/2409.07523)). The zip file contains a new script 'eaglesv2_0.py' along with a pre-computed grid of EWLi (and its intrinsic dispersion) as a function of $T_{eff}$ and age, a readme file containing a description of the changes in version 2.0 and the same 'input.dat' test file.
 
 The machine learning model provides better accuracy in reproducing the relationship between EWLi and its dispersion with age, free from the constraints of an arbitrary analytical model (see Weaver et al. 2024 for a full discussion).
 
-To run the script using the ANN model, simply use the -m option on the command line, making sure that the pre-computed grid is in the same folder as the script. If the -m flag is omitted then the model used is the same analytic model described by Jeffries et al. (2023) and implemented in version 1.0.
+To run the script using the ANN model, simply use the -m option on the command line, making sure that the pre-computed grid is in the same folder as the script. If the -m flag is omitted then the model used is the same analytic model described by Jeffries et al. (2023) and implemented in version 1.0 (with some minor bug fixes, see ReadMe file).
 
 Running on the example 'input.dat' file
 
@@ -87,6 +90,6 @@ and produce the output files
   # Citation
   If you make use of the EAGLES code(s) we would appreciate that you cite [Jeffries et al. 2023, MNRAS, 523, 802](https://academic.oup.com/mnras/article/523/1/802/7147327).
 
-  If you use Version 2 of the code (the neural network model), you should also cite [Weaver, Jeffries and Jackson 2024, arXiv 2409.07523](https://arxiv.org/abs/2409.07523).
+  If you use Version 2 of the code (the neural network model), you should also cite [Weaver, Jeffries and Jackson 2024, MNRAS, 534, 2014](https://academic.oup.com/mnras/article/534/3/2014/7756890).
   # Contact
   To register an interest, request clarifications or report bugs - email r.d.jeffries@keele.ac.uk
